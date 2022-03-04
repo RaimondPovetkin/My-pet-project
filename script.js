@@ -98,6 +98,10 @@ let canvasWidth=470;
 let canvasHeight=600;
 
 
+
+
+
+
 const canvas = document.querySelector("#canvas");
 const context = canvas.getContext("2d");
 

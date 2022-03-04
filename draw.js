@@ -39,13 +39,13 @@ function cameBackFace(idFace,faceBlockX1,faceBlockY1,faceBlockX2,faceBlockY2,fac
 function drowHair(versionHair,hairBlockX1,hairBlockY1,hairBlockX2,hairBlockY2
 ,hairBlockX3,hairBlockY3,hairBlockX4,hairBlockY4,strokeThickness,faceColor,lineWidThthick,contextDraw){
 
-    contextDraw.beginPath();
+/*     contextDraw.beginPath();
     contextDraw.rect(hairBlockX1, hairBlockY1, hairBlockX3-hairBlockX1, hairBlockY3-hairBlockY1);
     contextDraw.lineWidth = lineWidth;
     contextDraw.strokeStyle = "black";
     contextDraw.fillStyle = "blue";
     contextDraw.fill();
-    contextDraw.stroke(); 
+    contextDraw.stroke();  */
 
     contextDraw.beginPath();
     contextDraw.moveTo(hairBlockX1+20*pointWidth, hairBlockY1+30*pointHeight);
@@ -60,11 +60,15 @@ function drowHair(versionHair,hairBlockX1,hairBlockY1,hairBlockX2,hairBlockY2
     contextDraw.strokeStyle = strokeThickness;
     contextDraw.fillStyle = "grey";
     contextDraw.fill();
-    contextDraw.stroke();
-}
+    if(strokeThickness!=undefined)
+        contextDraw.stroke();
+    }
+
 
 
 function drawFace(version,faceBlockX1,faceBlockY1,faceBlockX2,faceBlockY2,faceBlockX3,faceBlockY3,faceBlockX4,faceBlockY4,pW,wForehead,pH,strokeThickness,faceColor,lineWidThthick,contextDraw){
+
+    console.log(strokeThickness)
 
     /* drawDot(faceBlockX1,faceBlockY1,contextDraw)
     drawDot(faceBlockX2,faceBlockY2,contextDraw)

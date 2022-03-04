@@ -16,38 +16,51 @@
 <form action="#" method="#" id="form">
     <div class="wrap">
         <label>
-            Цвет обводки:
-            <div class="radioBlock">
+            <div class="border_block block_select">
+                <div class="block_12 margin_bottom" >Цвет обводки:</div>
+                <div class="radioBlock">
 
-                <div class="radio">
-                    <input class="custom-radio H4d4d4d" type="radio" value="#4d4d4d" id="colorStroke-0" name="colorStroke" >
-                    <label for="colorStroke-0"></label>
+                    <div class="radio">
+                        <input class="custom-radio H4d4d4d" type="radio" value="#4d4d4d" id="colorStroke-0" name="colorStroke" >
+                        <label for="colorStroke-0"></label>
+                    </div>
+
+                    <div class="radio">
+                        <input class="custom-radio H000000" type="radio" value="#000000" id="colorStroke-1" name="colorStroke" >
+                        <label for="colorStroke-1"></label>
+                    </div>
+
+                    <div class="radio">
+                        <input class="custom-radio without" type="radio" value="undefined" id="colorStroke-2" name="colorStroke" >
+                        <label for="colorStroke-2"></label>
+                    </div>
+
+                
                 </div>
-
-                <div class="radio">
-                    <input class="custom-radio H000000" type="radio" value="#000000" id="colorStroke-1" name="colorStroke" >
-                    <label for="colorStroke-1"></label>
-                </div>
-
-                <div class="radio">
-                    <input class="custom-radio without" type="radio" value="undefined" id="colorStroke-2" name="colorStroke" >
-                    <label for="colorStroke-2"></label>
-                </div>
-
-            
             </div>
         </label>
 
         <label>
-            Толщина линии:
+
+
+            <div class="both border_block">
+                <div class="block_12">Толщина линии:</div>
+            
             
             <input type="range" class="lineWidth" min="1" max="5" name="lineWidth" value="3">
+            </div>
+
+
+
+            
         </label>
 
-      <br>
+      
 
             <label>
-            Цвет лица:
+                <div class="border_block block_select">
+                <div class="block_12 margin_bottom">Цвет лица:</div>
+            
             <div class="radioBlock">
 
 
@@ -86,64 +99,170 @@
                 
 
             </div>
+        </div>
         </label>
-        <br>
+        
         <label>
-            Зубы:
-                
-            <input type="range" class="teeth" min="1" max="100" name="heightOfTeeth" value="10">
+            <div class="both border_block">
+                <div class="block_12">Зубы:</div>
+                <input type="range" class="teeth" min="1" max="100" name="heightOfTeeth" value="10">
+            </div>
         </label>
-      <br>
+      
         <label>
-            Зрачки:
+
+
+            <div class="both border_block">
+                <div class="block_12">Зрачки:</div>
+                <input type="range" class="pupil" min="1" max="40" name="pupilSize" value="10">
+            </div>
+
+
             
-            <input type="range" class="pupil" min="1" max="40" name="pupilSize" value="10">
         </label>
-      <br>
+      
         <label>
-            Глаза:
+
+
+            <div class="both border_block">
+                <div class="block_12">Глаза:</div>
+                <input type="range" class="eyes" min="8" max="25" name="eyesSize" value="12">
+            </div>
+
+
+
             
-            <input type="range" class="eyes" min="8" max="25" name="eyesSize" value="12">
         </label>
-      <br>
+      
         <label>
+
+
+            <div class="both border_block">
+                <div class="block_12">Высота рта:</div>
+                <input type="range" class="mouthH" min="0" max="40" name="heightOfMouth" value="20">
+            </div>
+
+
+
             
-            Высота рта:
-            <input type="range" class="mouthH" min="0" max="40" name="heightOfMouth" value="20">
         </label>
-      <br>
+      
         <label>
-            Ширина рта:
+
+
+
+            <div class="both border_block">
+                <div class="block_12">Ширина рта:</div>
+            
             
             <input type="range" class="mouthW" min="0" max="10" name="widthOfMouth" value="2">
-        </label>
-      <br>
-        <label>
-            Длинна носа:
-            
-            <input type="range" class="nose" min="5" max="70" name="lengthOfNose" value="10">
-        </label>
-      <br>
-        <label>
-            Ширина лица:
-            
-            <input type="range" class="face" min="1" max="40" name="widthOfForehead" value="30">
-        </label>
-      <br>
-        <label>
-            Форма лица:
-            
-            <div class="face_shape">
-                <canvas class="canvas_face" id="canvas_face1"></canvas>
-                <canvas class="canvas_face" id="canvas_face2"></canvas>
-                <canvas class="canvas_face" id="canvas_face3"></canvas>
             </div>
+
+
+            
+        </label>
+      
+        <label>
+
+
+            <div class="both border_block">
+                <div class="block_12">Длинна носа:</div>
+                <input type="range" class="nose" min="5" max="70" name="lengthOfNose" value="10">
+            </div>
+
+
+            
+        </label>
+      
+        <label>
+
+
+            
+                <div class="both border_block">
+                    <div class="block_12">Ширина лица:</div>
+                    <input type="range" class="face" min="1" max="40" name="widthOfForehead" value="30">
+                </div>
+                
+            
+
+            
+        </label>
+      
+        <label>
+            <div class="border_block block_select">
+                <div class="block_12 margin_bottom">Форма лица:</div>
+            
+            
+                <div class="face_shape">
+                    <canvas class="canvas_face" id="canvas_face1"></canvas>
+                    <canvas class="canvas_face" id="canvas_face2"></canvas>
+                    <canvas class="canvas_face" id="canvas_face3"></canvas>
+                </div>
+            </div>
+            
         </label>
     </div>
   </form>
 
 </div>
  <style>
+     .block_select{
+        width: 20vw;
+        padding: 15px;
+     }
+     .margin_bottom{
+         margin-bottom: 10px;
+     }
+     .border_block{
+        border-radius: 10px;
+        background-color: #ffbe33;
+        margin: 8px;
+        box-shadow: inset 0 0 3px;
+     }
+.both{
+    width: 20vw;
+    height: 30px;
+    padding: 0 10px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+}
+input[type=range] {-webkit-appearance: none; margin: 5.8px 0; background-color: transparent !important;}
+
+input[type=range]:focus {outline: none;}
+
+input[type=range]::-webkit-slider-runnable-track {cursor: pointer; box-shadow: 2.4px 2.4px 6.2px rgba(7, 7, 163, 0.72), 0px 0px 2.4px rgba(8, 8, 187, 0.72); background:#FFC340; border-radius: 21.6px; border: 1px solid #A67100;}
+
+input[type=range]::-webkit-slider-thumb {box-shadow: 2.4px 2.4px 9.5px rgba(4, 16, 14, 0.78), 0px 0px 2.4px rgba(9, 36, 32, 0.78); border: 1.8px solid rgba(0, 0, 6, 0.77); border-radius: 28px; background: #A67100; cursor: pointer; -webkit-appearance: none; margin-top: -7.8px;}
+
+input[type=range]:focus::-webkit-slider-runnable-track {background: #FFC340;}
+
+input[type=range]::-moz-range-track {width: 100%; cursor: pointer; box-shadow: 2.4px 2.4px 6.2px rgba(7, 7, 163, 0.72), 0px 0px 2.4px rgba(8, 8, 187, 0.72); background:#FFC340; border-radius: 21.6px; border: 1px solid #A67100;}
+
+input[type=range]::-moz-range-thumb {box-shadow: 2.4px 2.4px 9.5px rgba(4, 16, 14, 0.78), 0px 0px 2.4px rgba(9, 36, 32, 0.78); border: 1.8px solid rgba(0, 0, 6, 0.77); border-radius: 28px; background: #ffff29; cursor: pointer;}
+
+input[type=range]::-ms-track {width: 100%; cursor: pointer; background: transparent; border-color: transparent; color: transparent;}
+
+input[type=range]::-ms-fill-lower {background: #FFC340; border: 1px solid #A67100; border-radius: 43.2px; box-shadow: 2.4px 2.4px 6.2px rgba(7, 7, 163, 0.72), 0px 0px 2.4px rgba(8, 8, 187, 0.72);}
+
+input[type=range]::-ms-fill-upper {background:#FFC340; border: 1px solid #A67100; border-radius: 43.2px; box-shadow: 2.4px 2.4px 6.2px rgba(7, 7, 163, 0.72), 0px 0px 2.4px rgba(8, 8, 187, 0.72);}
+
+input[type=range]::-ms-thumb {box-shadow: 2.4px 2.4px 9.5px rgba(4, 16, 14, 0.78), 0px 0px 2.4px rgba(9, 36, 32, 0.78); border: 1.8px solid rgba(0, 0, 6, 0.77); border-radius: 28px; background: #A67100; cursor: pointer;}
+
+input[type=range]:focus::-ms-fill-lower {background:#FFC340;}
+
+input[type=range]:focus::-ms-fill-upper {background: #FFC340;}
+
+/* Track */
+input[type=range]::-webkit-slider-runnable-track {height: 6.4px;}
+input[type=range]::-moz-range-track {height: 6.4px;}
+input[type=range]::-ms-track {height: 6.4px;}
+
+/* Thumb */
+input[type=range]::-webkit-slider-thumb {height: 20px; width: 8px;}
+input[type=range]::-moz-range-thumb {height: 20px; width: 8px;}
+input[type=range]::-ms-thumb {height: 20px; width: 8px;}
 
 .main_canvas{
     margin: 40px;
@@ -165,7 +284,7 @@
   /* создание в label псевдоэлемента  before со следующими стилями */
 
   .without+label::before{
-    background-color:rgba(red, green, blue, 255);
+    background-color:#fff;
   }
 
   .H4d4d4d+label::before{
@@ -176,7 +295,12 @@
   }
 
 
-
+.block_12{
+    width: 12vw;
+    font-size: 1em;
+    font-style: normal;
+    color: #292929;
+}
 
   .Hffcc99+label::before{
     background-color:#ffcc99;
@@ -204,7 +328,7 @@
     height: 2em;
     flex-shrink: 0;
     flex-grow: 0;
-    border: 1px solid #adb5bd;
+    border: 1px solid #292929;
     border-radius: 20%;
     margin-right: 0.5em;
     background-repeat: no-repeat;
@@ -230,7 +354,7 @@
 
   /* стили для радиокнопки, находящейся в состоянии checked */
   .custom-radio:checked+label::before {
-    border: 3px solid #0b76ef;
+    border: 3px solid #292929;
     
   }
 
@@ -238,6 +362,11 @@
 
     body {
       padding: 20px 50px;
+      background-color: #FFD373;
+    }
+    canvas{
+        background-color: #fff;
+        border-radius: 10px ;
     }
 
     .radio {
@@ -283,6 +412,7 @@
      }
      .wrap{
          width: 700px;
+         margin-top: 40px;
      }
      canvas{
         display:inline-block;
@@ -292,9 +422,9 @@
       font-weight: 700;
   }
  
-      form div {
+      /* form div {
       margin: 8px;
-  }
+  } */
  
   
       form button {
