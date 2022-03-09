@@ -49,7 +49,6 @@ form button {
     display: flex;
     justify-content: space-around;
     align-items: center;
-
 }
 input[type=range] {
     -webkit-appearance: none;
@@ -206,19 +205,15 @@ input[type=range]::-ms-thumb {
     background-position: center center;
     background-size: 50% 50%;
 }
-/* стили при наведении курсора на радио */
 .custom-radio:not(:disabled):not(:checked)+label:hover::before {
     border-color: #b3d7ff;
 }
-/* стили для радиокнопки, находящейся в фокусе */
 .custom-radio:focus+label::before {
     box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
 }
-/* стили для радиокнопки, находящейся в фокусе и не находящейся в состоянии checked */
 .custom-radio:focus:not(:checked)+label::before {
     border-color: #80bdff;
 }
-/* стили для радиокнопки, находящейся в состоянии checked */
 .custom-radio:checked+label::before {
     border: 3px solid #292929;
 }
