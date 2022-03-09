@@ -183,19 +183,18 @@ function draw(){
 
 /* инициализация цвета лица */
 let radioFace = document.getElementsByName('colorFace')
-for(let i=0;i<radioFace.length;i++){
-    radioFace[i].onchange=function(){
+for(let item of radioFace){
+    item.onchange=function(){
         faceColor =this.value
         clearCanvas(context,canvas)
         draw()
     }
 }
-
     
 /* инициализация цвета обводки */
 let radioStroke = document.getElementsByName('colorStroke')
-for(let i=0;i<radioStroke.length;i++){
-    radioStroke[i].onchange=function(){
+for(let item of radioStroke){
+    item.onchange=function(){
         strokeThickness =this.value
         if(strokeThickness==="undefined"){
             strokeThickness=undefined
@@ -208,11 +207,11 @@ for(let i=0;i<radioStroke.length;i++){
 
 /* инициализация формы лица */
 let radioFaceShape = document.getElementsByClassName("canvas_face")
-for(let i=0;i<radioFaceShape.length;i++){
-    radioFaceShape[i].onclick=function(){
-    idCanvasFace=radioFaceShape[i].id
-    clearCanvas(context,canvas)
-    draw()
+for(let item of radioFaceShape){
+    item.onclick=function(){
+        idCanvasFace=item.id
+        clearCanvas(context,canvas)
+        draw()
     }
 }
 
