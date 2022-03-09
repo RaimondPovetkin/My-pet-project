@@ -1,442 +1,156 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
     <title>Document</title>
 </head>
+
 <body>
     <div class="all">
         <div class="main_canvas">
             <canvas id="canvas"></canvas>
         </div>
+        <form action="#" method="#" id="form">
+            <div class="wrap">
 
-
-<form action="#" method="#" id="form">
-    <div class="wrap">
-        <label>
-            <div class="border_block block_select">
-                <div class="block_12 margin_bottom" >Цвет обводки:</div>
-                <div class="radioBlock">
-
-                    <div class="radio">
-                        <input class="custom-radio H4d4d4d" type="radio" value="#4d4d4d" id="colorStroke-0" name="colorStroke" >
-                        <label for="colorStroke-0"></label>
+                <label>
+                    <div class="border_block block_select">
+                        <div class="block_12 margin_bottom">Цвет обводки:</div>
+                        <div class="radioBlock">
+                            <div class="radio">
+                                <input class="custom-radio H4d4d4d" type="radio" value="#4d4d4d" id="colorStroke-0"
+                                    name="colorStroke">
+                                <label for="colorStroke-0"></label>
+                            </div>
+                            <div class="radio">
+                                <input class="custom-radio H000000" type="radio" value="#000000" id="colorStroke-1"
+                                    name="colorStroke">
+                                <label for="colorStroke-1"></label>
+                            </div>
+                            <div class="radio">
+                                <input class="custom-radio without" type="radio" value="undefined" id="colorStroke-2"
+                                    name="colorStroke">
+                                <label for="colorStroke-2"></label>
+                            </div>
+                        </div>
                     </div>
+                </label>
 
-                    <div class="radio">
-                        <input class="custom-radio H000000" type="radio" value="#000000" id="colorStroke-1" name="colorStroke" >
-                        <label for="colorStroke-1"></label>
+                <label>
+                    <div class="both border_block">
+                        <div class="block_12">Толщина линии:</div>
+                        <input type="range" class="lineWidth" min="1" max="5" name="lineWidth" value="3">
                     </div>
+                </label>
 
-                    <div class="radio">
-                        <input class="custom-radio without" type="radio" value="undefined" id="colorStroke-2" name="colorStroke" >
-                        <label for="colorStroke-2"></label>
+                <label>
+                    <div class="border_block block_select">
+                        <div class="block_12 margin_bottom">Цвет лица:</div>
+                        <div class="radioBlock">
+                            <div class="radio">
+                                <input class="custom-radio Hffcc99" type="radio" value="#ffcc99" id="color-0"
+                                    name="colorFace">
+                                <label for="color-0"></label>
+                            </div>
+                            <div class="radio">
+                                <input class="custom-radio H38160a" type="radio" value="#38160a" id="color-1"
+                                    name="colorFace">
+                                <label for="color-1"></label>
+                            </div>
+                            <div class="radio">
+                                <input class="custom-radio H582812" type="radio" value="#582812" id="color-2"
+                                    name="colorFace">
+                                <label for="color-2"></label>
+                            </div>
+                            <div class="radio">
+                                <input class="custom-radio Hf4cd8a" type="radio" value="#f4cd8a" id="color-3"
+                                    name="colorFace">
+                                <label for="color-3"></label>
+                            </div>
+                            <div class="radio">
+                                <input class="custom-radio Hf4a481" type="radio" value="#f4a481" id="color-4"
+                                    name="colorFace">
+                                <label for="color-4"></label>
+                            </div>
+                            <div class="radio">
+                                <input class="custom-radio Had6c44" type="radio" value="#ad6c44" id="color-5"
+                                    name="colorFace">
+                                <label for="color-5"></label>
+                            </div>
+                        </div>
                     </div>
+                </label>
 
-                
-                </div>
+                <label>
+                    <div class="both border_block">
+                        <div class="block_12">Зубы:</div>
+                        <input type="range" class="teeth" min="1" max="100" name="heightOfTeeth" value="10">
+                    </div>
+                </label>
+
+                <label>
+                    <div class="both border_block">
+                        <div class="block_12">Зрачки:</div>
+                        <input type="range" class="pupil" min="1" max="40" name="pupilSize" value="10">
+                    </div>
+                </label>
+
+                <label>
+                    <div class="both border_block">
+                        <div class="block_12">Глаза:</div>
+                        <input type="range" class="eyes" min="8" max="25" name="eyesSize" value="12">
+                    </div>
+                </label>
+
+                <label>
+                    <div class="both border_block">
+                        <div class="block_12">Высота рта:</div>
+                        <input type="range" class="mouthH" min="0" max="40" name="heightOfMouth" value="20">
+                    </div>
+                </label>
+
+                <label>
+                    <div class="both border_block">
+                        <div class="block_12">Ширина рта:</div>
+                        <input type="range" class="mouthW" min="0" max="10" name="widthOfMouth" value="2">
+                    </div>
+                </label>
+
+                <label>
+                    <div class="both border_block">
+                        <div class="block_12">Длинна носа:</div>
+                        <input type="range" class="nose" min="5" max="70" name="lengthOfNose" value="10">
+                    </div>
+                </label>
+
+                <label>
+                    <div class="both border_block">
+                        <div class="block_12">Ширина лица:</div>
+                        <input type="range" class="face" min="1" max="40" name="widthOfForehead" value="30">
+                    </div>
+                </label>
+
+                <label>
+                    <div class="border_block block_select">
+                        <div class="block_12 margin_bottom">Форма лица:</div>
+                        <div class="face_shape">
+                            <canvas class="canvas_face" id="canvas_face1"></canvas>
+                            <canvas class="canvas_face" id="canvas_face2"></canvas>
+                            <canvas class="canvas_face" id="canvas_face3"></canvas>
+                        </div>
+                    </div>
+                </label>
             </div>
-        </label>
+        </form>
 
-        <label>
-
-
-            <div class="both border_block">
-                <div class="block_12">Толщина линии:</div>
-            
-            
-            <input type="range" class="lineWidth" min="1" max="5" name="lineWidth" value="3">
-            </div>
-
-
-
-            
-        </label>
-
-      
-
-            <label>
-                <div class="border_block block_select">
-                <div class="block_12 margin_bottom">Цвет лица:</div>
-            
-            <div class="radioBlock">
-
-
-
-
-                <div class="radio">
-                    <input class="custom-radio Hffcc99" type="radio" value="#ffcc99" id="color-0" name="colorFace" >
-                    <label for="color-0"></label>
-                  </div>
-
-
-                <div class="radio">
-                    <input class="custom-radio H38160a" type="radio" value="#38160a" id="color-1" name="colorFace" >
-                    <label for="color-1"></label>
-                  </div>
-
-                  <div class="radio">
-                    <input class="custom-radio H582812" type="radio" value="#582812" id="color-2" name="colorFace" >
-                    <label for="color-2"></label>
-                  </div>
-                
-                  <div class="radio">
-                    <input class="custom-radio Hf4cd8a" type="radio" value="#f4cd8a" id="color-3" name="colorFace" >
-                    <label for="color-3"></label>
-                  </div>
-
-                  <div class="radio">
-                    <input class="custom-radio Hf4a481" type="radio" value="#f4a481" id="color-4" name="colorFace" >
-                    <label for="color-4"></label>
-                  </div>
-
-                  <div class="radio">
-                    <input class="custom-radio Had6c44" type="radio" value="#ad6c44" id="color-5" name="colorFace" >
-                    <label for="color-5"></label>
-                  </div>
-                
-
-            </div>
-        </div>
-        </label>
-        
-        <label>
-            <div class="both border_block">
-                <div class="block_12">Зубы:</div>
-                <input type="range" class="teeth" min="1" max="100" name="heightOfTeeth" value="10">
-            </div>
-        </label>
-      
-        <label>
-
-
-            <div class="both border_block">
-                <div class="block_12">Зрачки:</div>
-                <input type="range" class="pupil" min="1" max="40" name="pupilSize" value="10">
-            </div>
-
-
-            
-        </label>
-      
-        <label>
-
-
-            <div class="both border_block">
-                <div class="block_12">Глаза:</div>
-                <input type="range" class="eyes" min="8" max="25" name="eyesSize" value="12">
-            </div>
-
-
-
-            
-        </label>
-      
-        <label>
-
-
-            <div class="both border_block">
-                <div class="block_12">Высота рта:</div>
-                <input type="range" class="mouthH" min="0" max="40" name="heightOfMouth" value="20">
-            </div>
-
-
-
-            
-        </label>
-      
-        <label>
-
-
-
-            <div class="both border_block">
-                <div class="block_12">Ширина рта:</div>
-            
-            
-            <input type="range" class="mouthW" min="0" max="10" name="widthOfMouth" value="2">
-            </div>
-
-
-            
-        </label>
-      
-        <label>
-
-
-            <div class="both border_block">
-                <div class="block_12">Длинна носа:</div>
-                <input type="range" class="nose" min="5" max="70" name="lengthOfNose" value="10">
-            </div>
-
-
-            
-        </label>
-      
-        <label>
-
-
-            
-                <div class="both border_block">
-                    <div class="block_12">Ширина лица:</div>
-                    <input type="range" class="face" min="1" max="40" name="widthOfForehead" value="30">
-                </div>
-                
-            
-
-            
-        </label>
-      
-        <label>
-            <div class="border_block block_select">
-                <div class="block_12 margin_bottom">Форма лица:</div>
-            
-            
-                <div class="face_shape">
-                    <canvas class="canvas_face" id="canvas_face1"></canvas>
-                    <canvas class="canvas_face" id="canvas_face2"></canvas>
-                    <canvas class="canvas_face" id="canvas_face3"></canvas>
-                </div>
-            </div>
-            
-        </label>
     </div>
-  </form>
-
-</div>
- <style>
-     .block_select{
-        width: 20vw;
-        padding: 15px;
-     }
-     .margin_bottom{
-         margin-bottom: 10px;
-     }
-     .border_block{
-        border-radius: 10px;
-        background-color: #ffbe33;
-        margin: 8px;
-        box-shadow: inset 0 0 3px;
-     }
-.both{
-    width: 20vw;
-    height: 30px;
-    padding: 0 10px;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-
-}
-input[type=range] {-webkit-appearance: none; margin: 5.8px 0; background-color: transparent !important;}
-
-input[type=range]:focus {outline: none;}
-
-input[type=range]::-webkit-slider-runnable-track {cursor: pointer; box-shadow: 2.4px 2.4px 6.2px rgba(7, 7, 163, 0.72), 0px 0px 2.4px rgba(8, 8, 187, 0.72); background:#FFC340; border-radius: 21.6px; border: 1px solid #A67100;}
-
-input[type=range]::-webkit-slider-thumb {box-shadow: 2.4px 2.4px 9.5px rgba(4, 16, 14, 0.78), 0px 0px 2.4px rgba(9, 36, 32, 0.78); border: 1.8px solid rgba(0, 0, 6, 0.77); border-radius: 28px; background: #A67100; cursor: pointer; -webkit-appearance: none; margin-top: -7.8px;}
-
-input[type=range]:focus::-webkit-slider-runnable-track {background: #FFC340;}
-
-input[type=range]::-moz-range-track {width: 100%; cursor: pointer; box-shadow: 2.4px 2.4px 6.2px rgba(7, 7, 163, 0.72), 0px 0px 2.4px rgba(8, 8, 187, 0.72); background:#FFC340; border-radius: 21.6px; border: 1px solid #A67100;}
-
-input[type=range]::-moz-range-thumb {box-shadow: 2.4px 2.4px 9.5px rgba(4, 16, 14, 0.78), 0px 0px 2.4px rgba(9, 36, 32, 0.78); border: 1.8px solid rgba(0, 0, 6, 0.77); border-radius: 28px; background: #ffff29; cursor: pointer;}
-
-input[type=range]::-ms-track {width: 100%; cursor: pointer; background: transparent; border-color: transparent; color: transparent;}
-
-input[type=range]::-ms-fill-lower {background: #FFC340; border: 1px solid #A67100; border-radius: 43.2px; box-shadow: 2.4px 2.4px 6.2px rgba(7, 7, 163, 0.72), 0px 0px 2.4px rgba(8, 8, 187, 0.72);}
-
-input[type=range]::-ms-fill-upper {background:#FFC340; border: 1px solid #A67100; border-radius: 43.2px; box-shadow: 2.4px 2.4px 6.2px rgba(7, 7, 163, 0.72), 0px 0px 2.4px rgba(8, 8, 187, 0.72);}
-
-input[type=range]::-ms-thumb {box-shadow: 2.4px 2.4px 9.5px rgba(4, 16, 14, 0.78), 0px 0px 2.4px rgba(9, 36, 32, 0.78); border: 1.8px solid rgba(0, 0, 6, 0.77); border-radius: 28px; background: #A67100; cursor: pointer;}
-
-input[type=range]:focus::-ms-fill-lower {background:#FFC340;}
-
-input[type=range]:focus::-ms-fill-upper {background: #FFC340;}
-
-/* Track */
-input[type=range]::-webkit-slider-runnable-track {height: 6.4px;}
-input[type=range]::-moz-range-track {height: 6.4px;}
-input[type=range]::-ms-track {height: 6.4px;}
-
-/* Thumb */
-input[type=range]::-webkit-slider-thumb {height: 20px; width: 8px;}
-input[type=range]::-moz-range-thumb {height: 20px; width: 8px;}
-input[type=range]::-ms-thumb {height: 20px; width: 8px;}
-
-.main_canvas{
-    margin: 40px;
-}
-/* для элемента input c type="radio" */
-.custom-radio {
-    position: absolute;
-    z-index: -1;
-    opacity: 0;
-  }
-
-  /* для элемента label связанного с .custom-radio */
-  .custom-radio+label {
-    display: inline-flex;
-    align-items: center;
-    user-select: none;
-  }
-
-  /* создание в label псевдоэлемента  before со следующими стилями */
-
-  .without+label::before{
-    background-color:#fff;
-  }
-
-  .H4d4d4d+label::before{
-    background-color:#4d4d4d;
-  }
-  .H000000+label::before{
-    background-color:#000000;
-  }
-
-
-.block_12{
-    width: 12vw;
-    font-size: 1em;
-    font-style: normal;
-    color: #292929;
-}
-
-  .Hffcc99+label::before{
-    background-color:#ffcc99;
-  }
-  .H38160a+label::before{
-    background-color:#38160a;
-  }
-  .H582812+label::before {
-    background-color:#582812;
-  }
-  .Hf4cd8a+label::before {
-    background-color:#f4cd8a;
-  }
-  .Hf4a481+label::before {
-    background-color:#f4a481;
-  }
-  .Had6c44+label::before {
-    background-color:#ad6c44;
-  }
-
-  .custom-radio+label::before {
-    content: '';
-    display: inline-block;
-    width: 2em;
-    height: 2em;
-    flex-shrink: 0;
-    flex-grow: 0;
-    border: 1px solid #292929;
-    border-radius: 20%;
-    margin-right: 0.5em;
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-size: 50% 50%;
-  }
-
-  /* стили при наведении курсора на радио */
-  .custom-radio:not(:disabled):not(:checked)+label:hover::before {
-    border-color: #b3d7ff;
-  }
-
-
-  /* стили для радиокнопки, находящейся в фокусе */
-  .custom-radio:focus+label::before {
-    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
-  }
-
-  /* стили для радиокнопки, находящейся в фокусе и не находящейся в состоянии checked */
-  .custom-radio:focus:not(:checked)+label::before {
-    border-color: #80bdff;
-  }
-
-  /* стили для радиокнопки, находящейся в состоянии checked */
-  .custom-radio:checked+label::before {
-    border: 3px solid #292929;
-    
-  }
-
-
-
-    body {
-      padding: 20px 50px;
-      background-color: #FFD373;
-    }
-    canvas{
-        background-color: #fff;
-        border-radius: 10px ;
-    }
-
-    .radio {
-      margin-bottom: 0.4em;
-    }
-
-
-
-
-
-/* .faceColorBlock:checked+label::before {
-  border-color: #0b76ef;
-  background-color: #0b76ef;
-  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3e%3cpath fill='%23fff' d='M6.564.75l-3.59 3.612-1.538-1.55L0 4.26 2.974 7.25 8 2.193z'/%3e%3c/svg%3e");
-}
-.faceColorBlock+label {
-  display: inline-flex;
-  align-items: center;
-  user-select: none;
-}
-.faceColorBlock+label::before {
-  content: '';
-  display: inline-block;
-  width: 1em;
-  height: 1em;
-  flex-shrink: 0;
-  flex-grow: 0;
-  border: 1px solid #adb5bd;
-  border-radius: 0.25em;
-  margin-right: 0.5em;
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: 50% 50%;
-} */
-     .radioBlock{
-         display: flex;
-     }
-     .all{
-         display: flex;
-     }
-     canvas{
-         border: 2px solid black;
-     }
-     .wrap{
-         width: 700px;
-         margin-top: 40px;
-     }
-     canvas{
-        display:inline-block;
-     }
-      body {
-      font-family: sans-serif;
-      font-weight: 700;
-  }
- 
-      /* form div {
-      margin: 8px;
-  } */
- 
-  
-      form button {
-      margin-top: 10px;
-      font-weight: 700;
-      padding: 10px 20px;
-      font-size: large;
-  }
-
-</style>
     <script src="drawDot.js"></script>
     <script src="draw.js"></script>
     <script src="script.js"></script>
 </body>
+
 </html>

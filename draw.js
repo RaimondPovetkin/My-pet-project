@@ -36,8 +36,8 @@ function cameBackFace(idFace,faceBlockX1,faceBlockY1,faceBlockX2,faceBlockY2,fac
     }
 }
 
-function drowHair(versionHair,hairBlockX1,hairBlockY1,hairBlockX2,hairBlockY2
-,hairBlockX3,hairBlockY3,hairBlockX4,hairBlockY4,strokeThickness,faceColor,lineWidThthick,contextDraw){
+function drowHair(hair,strokeThickness,lineWidThthick,pW,pH,contextDraw){
+    console.log(hair,strokeThickness,lineWidThthick,pW,pH,contextDraw)
 
 /*     contextDraw.beginPath();
     contextDraw.rect(hairBlockX1, hairBlockY1, hairBlockX3-hairBlockX1, hairBlockY3-hairBlockY1);
@@ -48,11 +48,11 @@ function drowHair(versionHair,hairBlockX1,hairBlockY1,hairBlockX2,hairBlockY2
     contextDraw.stroke();  */
 
     contextDraw.beginPath();
-    contextDraw.moveTo(hairBlockX1+20*pointWidth, hairBlockY1+30*pointHeight);
-    contextDraw.bezierCurveTo(hairBlockX1, hairBlockY1+30*pointHeight, hairBlockX1-50*pointWidth, hairBlockY1+50*pointHeight, hairBlockX1+100*pointWidth, hairBlockY1+150*pointHeight);
-    contextDraw.bezierCurveTo(hairBlockX2+190*pointWidth, hairBlockY2-150*pointHeight, hairBlockX2+150*pointWidth, hairBlockY2-200*pointHeight, hairBlockX2+130*pointWidth, hairBlockY2-170*pointHeight);
-    contextDraw.bezierCurveTo(hairBlockX3, hairBlockY3-210*pointHeight, hairBlockX3-50*pointWidth, hairBlockY3-210*pointHeight, hairBlockX3-50*pointWidth, hairBlockY3-190*pointHeight);
-    contextDraw.bezierCurveTo(hairBlockX4-66*pointWidth, hairBlockY4-10*pointHeight, hairBlockX4-136*pointWidth, hairBlockY4-10*pointHeight, hairBlockX4-136*pointWidth, hairBlockY4+30*pointHeight);
+    contextDraw.moveTo(hair.hairBlockX1+20*pW, hair.hairBlockY1+30*pH);
+    contextDraw.bezierCurveTo(hair.hairBlockX1, hair.hairBlockY1+30*pH, hair.hairBlockX1-50*pW, hair.hairBlockY1+50*pH, hair.hairBlockX1+100*pW, hair.hairBlockY1+150*pH);
+    contextDraw.bezierCurveTo(hair.hairBlockX2+190*pW, hair.hairBlockY2-150*pH, hair.hairBlockX2+150*pW, hair.hairBlockY2-200*pH, hair.hairBlockX2+130*pW, hair.hairBlockY2-170*pH);
+    contextDraw.bezierCurveTo(hair.hairBlockX3, hair.hairBlockY3-210*pH, hair.hairBlockX3-50*pW, hair.hairBlockY3-210*pH, hair.hairBlockX3-50*pW, hair.hairBlockY3-190*pH);
+    contextDraw.bezierCurveTo(hair.hairBlockX4-66*pW, hair.hairBlockY4-10*pH, hair.hairBlockX4-136*pW, hair.hairBlockY4-10*pH, hair.hairBlockX4-136*pW, hair.hairBlockY4+30*pH);
 
 
     contextDraw.closePath();
@@ -67,19 +67,6 @@ function drowHair(versionHair,hairBlockX1,hairBlockY1,hairBlockX2,hairBlockY2
 
 
 function drawFace(version,faceBlockX1,faceBlockY1,faceBlockX2,faceBlockY2,faceBlockX3,faceBlockY3,faceBlockX4,faceBlockY4,pW,wForehead,pH,strokeThickness,faceColor,lineWidThthick,contextDraw){
-
-    console.log(strokeThickness)
-
-    /* drawDot(faceBlockX1,faceBlockY1,contextDraw)
-    drawDot(faceBlockX2,faceBlockY2,contextDraw)
-    drawDot(faceBlockX3,faceBlockY3,contextDraw)
-    drawDot(faceBlockX4,faceBlockY4,contextDraw) */
-
-    /* contextDraw.beginPath();
-    contextDraw.rect(faceBlockX1, faceBlockY1, faceBlockX3-faceBlockX1, faceBlockY3-faceBlockY1);
-    contextDraw.lineWidth = 2;
-    contextDraw.strokeStyle = "black";
-    contextDraw.stroke();  */
 
     if(version=="canvas_face1"){
         contextDraw.beginPath();
